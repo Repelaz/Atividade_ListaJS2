@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista JS 2</title>
+</head>
+<body>
+    
+    <script>
+
+        var aluno1 = [5, 8, 9, 10]
+        var aluno2 = [6, 3, 7, 10] 
+        var aluno3 = [8, 9, 5, 6]
+        var soma1 = 0;
+        var soma2 = 0;
+        var soma3 = 0;
+        var medias = []
+        var maior7 = []
+
+
+
+        for (item in aluno1) {
+            soma1 = soma1 + aluno1[item]
+        }
+        medias.push(soma1/aluno1.length)
+
+        for (item in aluno2) {
+            soma2 = soma2 + aluno2[item]
+        }
+        medias.push(soma2/aluno2.length)
+
+        for (item in aluno3) {
+            soma3 = soma3 + aluno3[item]
+        }
+        medias.push(soma3/aluno3.length)
+
+        for (item in medias) {
+            if (medias[item] >= 7){
+                maior7.push(item)
+            }
+        }
+
+        alert (medias)
+        alert (maior7.length)
+
+    </script>
+
+</body>
+</html>

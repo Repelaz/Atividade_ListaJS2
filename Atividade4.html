@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista JS 2</title>
+</head>
+<body>
+    
+    <script>
+
+        var lista = ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'j']
+        var vogais = ['a', 'e', 'i', 'o', 'u']
+        var quantidade = 0;
+        var consoantes = []
+
+        for (item of lista) {
+            if (vogais.includes(item) == false) {
+                consoantes.push(item)
+                quantidade += 1
+            }
+        }
+
+        alert (consoantes)
+        alert (quantidade)
+
+    </script>
+
+</body>
+</html>
