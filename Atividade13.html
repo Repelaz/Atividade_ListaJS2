@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista JS 2</title>
+</head>
+<body>
+    
+    <script>
+
+        var meses = ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+        var temperatura = [14, 25, 33, 12, 29, 33, 17, 22, 34, 25, 19, 40]
+        var soma = 0
+    
+        for (numero in temperatura) {
+            soma += temperatura[numero]
+        }
+
+        var media = soma / temperatura.length
+    
+        alert("Média anual: " + media + "°C")
+    
+        alert("Meses com temperaturas acima da média anual:")
+        for (numero in temperatura) {
+            if (temperatura[numero] > media) {
+                alert(meses[numero] + ": " + temperatura[numero] + "°C")
+            }
+        }
+    
+    </script>
+</body>
+</html>

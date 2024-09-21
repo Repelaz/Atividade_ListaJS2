@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista JS 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        var perguntas = [
+            "Telefonou para a vítima? (sim/não)",
+            "Esteve no local do crime? (sim/não)",
+            "Mora perto da vítima? (sim/não)",
+            "Devia para a vítima? (sim/não)",
+            "Já trabalhou com a vítima? (sim/não)"
+        ];
+
+        var respostasPositivas = 0;
+
+        for (var item = 0; item < perguntas.length; item = item + 1) {
+            var resposta = prompt(perguntas[item]).toLowerCase();
+            if (resposta === "sim") {
+                respostasPositivas += 1;
+            }
+        }
+
+        var classificacao;
+        if (respostasPositivas === 0) {
+            classificacao = "Inocente";
+        } else if (respostasPositivas === 1) {
+            classificacao = "Inocente";
+        } else if (respostasPositivas === 2) {
+            classificacao = "Suspeita";
+        } else if (respostasPositivas >= 3 && respostasPositivas <= 4) {
+            classificacao = "Cúmplice";
+        } else {
+            classificacao = "Assassino";
+        }
+
+        alert("Classificação: " + classificacao);
+
+    </script>
+</body>
+
+</html>
